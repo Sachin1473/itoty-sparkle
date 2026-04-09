@@ -45,15 +45,18 @@ const GallerySection = () => {
   const [activeYear, setActiveYear] = useState(years[0]);
 
   return (
-    <section className="py-20 lg:py-28 bg-card" id="gallery">
+    <section className="py-20 lg:py-28 bg-muted" id="gallery">
       <div className="section-container">
         <div className="section-label">
           <div className="w-8 h-px bg-secondary" />
-          <span className="font-condensed text-xs font-semibold tracking-[0.2em] uppercase text-secondary">Event Gallery</span>
+          <span className="font-condensed text-xs font-semibold tracking-[0.2em] uppercase text-secondary">Our Gallery</span>
         </div>
-        <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-tight text-foreground mb-10">
-          ITOTY <em className="italic text-secondary">showcase</em>
+        <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-tight text-foreground mb-4">
+          ITOTY <em className="italic text-secondary">Showcase</em>
         </h2>
+        <p className="text-base text-muted-foreground mb-10 max-w-2xl">
+          Moments from the ITOTY Awards ceremonies, capturing the celebration of excellence in Indian agriculture.
+        </p>
 
         {/* Year tabs */}
         <div className="flex flex-wrap gap-2 mb-10">
@@ -61,10 +64,10 @@ const GallerySection = () => {
             <button
               key={year}
               onClick={() => setActiveYear(year)}
-              className={`font-condensed text-sm font-semibold tracking-[0.1em] uppercase px-5 py-2.5 rounded-sm transition-all border ${
+              className={`font-condensed text-sm font-semibold tracking-[0.08em] px-5 py-2.5 rounded transition-all border ${
                 activeYear === year
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-transparent text-muted-foreground border-primary/20 hover:border-primary/50 hover:text-foreground"
+                  ? "bg-secondary text-secondary-foreground border-secondary"
+                  : "bg-card text-muted-foreground border-primary/15 hover:border-secondary/40 hover:text-foreground"
               }`}
             >
               {year}
@@ -73,13 +76,13 @@ const GallerySection = () => {
         </div>
 
         {/* Gallery grid */}
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {galleryByYear[activeYear].map((src, i) => (
-            <div key={`${activeYear}-${i}`} className="break-inside-avoid mb-3 rounded overflow-hidden group">
+            <div key={`${activeYear}-${i}`} className="rounded-lg overflow-hidden group aspect-[4/3]">
               <img
                 src={src}
                 alt={`ITOTY ${activeYear} Event ${i + 1}`}
-                className="w-full block rounded object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
             </div>
