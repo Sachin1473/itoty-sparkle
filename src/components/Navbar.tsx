@@ -16,7 +16,7 @@ const Navbar = () => {
         </a>
 
         <ul className="hidden lg:flex items-center gap-8 list-none">
-          {["Home", "About", "Winners", "Gallery", "Jury", "Contact"].map((item) => (
+          {["Home", "About", "Winners", "Categories", "Gallery", "Jury", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}

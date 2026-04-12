@@ -7,24 +7,26 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src="https://www.itoty.org/assets/images/itoty-back-2025-desktop.jpg"
-          alt="ITOTY 2025 Awards"
+          alt="ITOTY 2026 Awards"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 via-secondary/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-secondary/40 to-transparent" />
       </div>
 
       {/* Hero content overlay card */}
       <div className="relative z-10 section-container flex items-end lg:items-center min-h-[calc(100vh-72px)] pb-32 lg:pb-0">
         <div className="bg-card/95 backdrop-blur-sm rounded-lg shadow-xl p-8 lg:p-12 max-w-xl w-full">
           <span className="font-condensed text-xs font-bold tracking-[0.2em] uppercase text-secondary mb-4 block">
-            Since 2019
+            7th Edition • Since 2019
           </span>
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[0.95] text-foreground mb-2">
-            Indian Tractor<br />
-            <em className="italic text-primary">of the Year</em>
+            ITOTY <em className="italic text-primary">2026</em>
           </h1>
-          <p className="text-base font-light leading-relaxed text-muted-foreground mt-5 mb-8">
-            Recognising outstanding contributions across the Indian agricultural ecosystem. Celebrating innovation, impact, and farmer-first thinking.
+          <p className="font-condensed text-lg sm:text-xl font-semibold tracking-wide uppercase text-secondary mt-3 mb-2">
+            India's Biggest Tractor Awards is Back!
+          </p>
+          <p className="text-base font-light leading-relaxed text-muted-foreground mt-4 mb-8">
+            Stay tuned for more updates! Recognising outstanding contributions across the Indian agricultural ecosystem. Celebrating innovation, impact, and farmer-first thinking.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -48,9 +50,9 @@ const HeroSection = () => {
         <div className="section-container">
           <div className="bg-card rounded-t-lg shadow-lg grid grid-cols-2 lg:grid-cols-4 divide-x divide-primary/10 mx-4 lg:mx-12">
             {[
-              { icon: <Calendar className="w-5 h-5" />, value: "Reveal Soon", label: "Date" },
-              { icon: <MapPin className="w-5 h-5" />, value: "Reveal Soon", label: "Location" },
-              { icon: <LayoutGrid className="w-5 h-5" />, value: "10+", label: "Categories" },
+              { icon: <Calendar className="w-5 h-5" />, value: "17th June 2026", label: "Date" },
+              { icon: <MapPin className="w-5 h-5" />, value: "New Delhi", label: "Location" },
+              { icon: <LayoutGrid className="w-5 h-5" />, value: "16", label: "Categories" },
               { icon: <Users className="w-5 h-5" />, value: "8", label: "Jury Members" },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-2 py-5 px-4">
