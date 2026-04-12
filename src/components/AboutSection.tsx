@@ -15,13 +15,16 @@ const AboutSection = () => (
         <div>
           <div className="space-y-5 text-[17px] font-light leading-relaxed text-muted-foreground">
             <p>
-              The <strong className="font-semibold text-foreground">ITOTY Awards</strong> was launched in <strong className="font-semibold text-foreground">2019</strong> by <strong className="font-semibold text-foreground">Rajat Gupta</strong>, founder of <strong className="font-semibold text-foreground">Tractor Junction</strong>, to recognise outstanding contributions across the Indian agricultural ecosystem.
+              The <strong className="font-semibold text-foreground">ITOTY Awards</strong> were started in <strong className="font-semibold text-foreground">2019</strong> by <strong className="font-semibold text-foreground">Rajat Gupta</strong>, founder of <strong className="font-semibold text-foreground">Tractor Junction</strong>, to recognize outstanding contributions across the Indian agricultural ecosystem.
             </p>
             <p>
               What began as a platform to honour excellence in tractors has now grown to celebrate <strong className="font-semibold text-foreground">innovation and impact</strong> in areas like farm equipment, CSR initiatives, banking, and agri-finance. The awards highlight the efforts of companies and institutions that are driving meaningful change for Indian farmers.
             </p>
             <p>
-              With a transparent evaluation process — <strong className="font-semibold text-foreground">60% jury votes</strong> and <strong className="font-semibold text-foreground">40% public votes</strong> — the ITOTY Awards have earned the trust of both the industry and farming community.
+              With a transparent evaluation process — <strong className="font-semibold text-foreground">60% jury votes</strong> and <strong className="font-semibold text-foreground">40% public votes</strong> — the ITOTY Awards have earned the trust of both the industry and farming community. Today, ITOTY stands as one of India's most respected platforms for recognizing commitment, progress, and farmer-first thinking.
+            </p>
+            <p>
+              The <strong className="font-semibold text-foreground">7th Edition</strong> of <strong className="font-semibold text-foreground">ITOTY 2026</strong> continues this legacy by celebrating excellence, innovation, and impact across the agricultural sector.
             </p>
           </div>
 
@@ -49,7 +52,7 @@ const AboutSection = () => (
             </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            The <strong className="font-semibold text-foreground">5th Edition</strong> in 2024 introduced a new award category for <strong className="font-semibold text-foreground">Banks and NBFCs</strong>, acknowledging their contribution to supporting farmers with easy and timely financing.
+            The <strong className="font-semibold text-foreground">7th Edition</strong> in 2026 features <strong className="font-semibold text-foreground">16 categories</strong> across Tractors, Implements, and Finance — acknowledging contributions across the full agricultural value chain.
           </p>
         </div>
       </div>
