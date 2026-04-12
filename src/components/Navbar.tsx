@@ -46,7 +46,7 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="lg:hidden bg-card border-t border-primary/10 shadow-lg">
           <div className="section-container py-6 flex flex-col gap-4">
-            {["Home", "About", "Winners", "Gallery", "Jury", "Contact"].map((item) => (
+            {["Home", "About", "Winners", "Categories", "Gallery", "Jury", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileOpen(false)}
                 className="font-condensed text-sm font-medium tracking-[0.1em] uppercase text-foreground/70 no-underline hover:text-secondary">
                 {item}
