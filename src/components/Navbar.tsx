@@ -28,12 +28,10 @@ const Navbar = () => {
           ))}
           <li>
             <a
-              href="https://pages.razorpay.com/pl_OS8aVodkJGyGwi/view"
-              target="_blank"
-              rel="noopener"
+              href="#categories"
               className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground font-condensed text-xs font-bold tracking-[0.12em] uppercase px-5 py-2.5 rounded transition-all hover:bg-forest-mid"
             >
-              Get ITOTY Pass
+              Vote Now
             </a>
           </li>
         </ul>
@@ -52,9 +50,9 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <a href="https://pages.razorpay.com/pl_OS8aVodkJGyGwi/view" target="_blank" rel="noopener"
+            <a href="#categories" onClick={() => setMobileOpen(false)}
               className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground font-condensed text-xs font-bold tracking-[0.12em] uppercase px-5 py-2.5 rounded w-fit">
-              Get ITOTY Pass
+              Vote Now
             </a>
           </div>
         </div>
