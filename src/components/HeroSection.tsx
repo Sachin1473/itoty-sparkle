@@ -10,22 +10,16 @@ const infoCards = [
 const HeroSection = () => {
   return (
     <section id="home">
-      {/* Banner */}
-      <div className="relative w-full min-h-[60vh] lg:min-h-[75vh] pt-[72px]">
-        <img
-          src="/images/ITOTY_banner.png"
-          alt="ITOTY 2026 Banner"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-secondary/60" />
-        <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-[60vh] lg:min-h-[75vh] px-4">
-          <h1 className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none mb-4">
+      {/* Hero Text */}
+      <div className="pt-[72px] bg-background">
+        <div className="flex flex-col items-center justify-center text-center py-16 lg:py-24 px-4">
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold text-foreground leading-none mb-4">
             ITOTY <em className="italic text-primary">2026</em>
           </h1>
-          <p className="font-condensed text-lg sm:text-xl lg:text-2xl font-bold tracking-[0.15em] uppercase text-white/90 mb-3">
+          <p className="font-condensed text-lg sm:text-xl lg:text-2xl font-bold tracking-[0.15em] uppercase text-foreground/80 mb-3">
             India's Biggest Tractor Awards is Back!
           </p>
-          <p className="text-base sm:text-lg text-white/80 font-light">
+          <p className="text-base sm:text-lg text-muted-foreground font-light">
             Stay Tuned For More Updates!
           </p>
         </div>
