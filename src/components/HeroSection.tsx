@@ -10,45 +10,38 @@ const infoCards = [
 const HeroSection = () => {
   return (
     <section id="home">
-      {/* Hero Text */}
-      <div className="pt-[72px] bg-background">
-        <div className="flex flex-col items-center justify-center text-center py-16 lg:py-24 px-4">
-          <h1 className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold text-foreground leading-none mb-4">
-            ITOTY <em className="italic text-primary">2026</em>
+      {/* Professional Banner */}
+      <div
+        className="pt-[72px] relative overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, hsl(150, 38%, 12%) 0%, hsl(150, 38%, 20%) 50%, hsl(150, 30%, 14%) 100%)",
+        }}
+      >
+        {/* Subtle texture overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage: `radial-gradient(circle at 20% 50%, hsl(45, 80%, 60%) 1px, transparent 1px),
+              radial-gradient(circle at 80% 30%, hsl(45, 80%, 60%) 1px, transparent 1px)`,
+            backgroundSize: "60px 60px, 80px 80px",
+          }}
+        />
+        {/* Decorative accent lines */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
+        <div className="relative flex flex-col items-center justify-center text-center py-20 lg:py-32 px-4">
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold leading-none mb-5">
+            <span className="text-white">ITOTY </span>
+            <em className="italic text-primary">2026</em>
           </h1>
-          <p className="font-condensed text-lg sm:text-xl lg:text-2xl font-bold tracking-[0.15em] uppercase text-foreground/80 mb-3">
+          <p className="font-condensed text-lg sm:text-xl lg:text-2xl font-bold tracking-[0.15em] uppercase text-white/90 mb-4">
             India's Biggest Tractor Awards is Back!
           </p>
-          <p className="text-base sm:text-lg text-muted-foreground font-light">
+          <div className="w-16 h-0.5 bg-primary rounded-full mb-4" />
+          <p className="text-base sm:text-lg text-white/60 font-light">
             Stay Tuned For More Updates!
           </p>
-        </div>
-      </div>
-
-      {/* 2025 Winners Strip */}
-      <div className="bg-muted py-10 lg:py-14">
-        <div className="section-container text-center">
-          <span className="font-condensed text-xs font-bold tracking-[0.2em] uppercase text-primary mb-2 block">
-            ITOTY 2025 Winner
-          </span>
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-foreground mb-8">
-            Indian Tractor of the Year 2025
-          </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            <div className="bg-card rounded-xl shadow-md border border-primary/10 p-6 max-w-xs w-full">
-              <img
-                src="https://www.tractorjunction.com/assets/tractor/farmtrac-47-promaxx-4wd.webp"
-                alt="Farmtrac Promaxx 47"
-                className="w-full h-40 object-contain mb-4"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "https://www.itoty.org/assets/images/itoty-logo.png";
-                  (e.target as HTMLImageElement).className = "w-20 h-20 object-contain mx-auto opacity-30 mb-4";
-                }}
-              />
-              <p className="font-heading text-lg font-semibold text-foreground">Farmtrac Promaxx 47</p>
-              <p className="text-sm text-muted-foreground mt-1">6th Edition • 2025</p>
-            </div>
-          </div>
         </div>
       </div>
 
