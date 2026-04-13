@@ -1,19 +1,34 @@
 
 
-## Changes
+## Hero Section Redesign
 
-### 1. Navbar — Replace CTA with "Vote Now" linking to #categories
-- Change "Get ITOTY Pass" to "Vote Now" in both desktop and mobile nav
-- Remove the Razorpay external link (`https://pages.razorpay.com/...`)
-- Change to `href="#categories"` (scrolls to categories section)
-- Remove `target="_blank"` and `rel="noopener"` attributes
+### What changes
+1. **Remove the 2025 Winners Strip** (lines 28–53) entirely from `HeroSection.tsx`
+2. **Redesign the hero banner** — replace the plain text section with a professional, visually striking banner:
+   - Deep green gradient background (using the secondary/accent color `hsl(150, 38%, 16%)`) with a subtle pattern or texture effect via CSS
+   - Large bold "ITOTY 2026" heading with the year in gold (primary color)
+   - "India's Biggest Tractor Awards is Back!" as a prominent subheading
+   - "Stay Tuned For More Updates!" as a lighter tagline
+   - Generous vertical padding for visual impact
+   - Full-width banner feel, professional and clean
+3. **Keep the 4 clickable info cards** unchanged below the banner
 
-### 2. HeroSection — Remove background banner
-- Remove the `ITOTY_banner.png` image and the green overlay div
-- Keep the hero text (ITOTY 2026, subheading, tagline) styled on a clean light background with dark text
-- Keep the 2025 Winners Strip and Info Cards unchanged
+### File Modified
+- `src/components/HeroSection.tsx` — Remove winners strip, redesign hero area with gradient banner
 
-### Files Modified
-- `src/components/Navbar.tsx` — CTA button text and link (2 places)
-- `src/components/HeroSection.tsx` — Remove banner image/overlay, restyle text for light background
+### Visual Layout
+```text
+┌─────────────────────────────────────┐
+│     ██ Deep Green Gradient BG ██    │
+│                                     │
+│         ITOTY  2026 (gold)          │
+│  India's Biggest Tractor Awards     │
+│         is Back!                    │
+│   Stay Tuned For More Updates!      │
+│                                     │
+├────────┬────────┬────────┬──────────┤
+│  Date  │Location│ Categ. │  Jury    │
+│ 17 Jun │New Del │  16    │   8      │
+└────────┴────────┴────────┴──────────┘
+```
 
