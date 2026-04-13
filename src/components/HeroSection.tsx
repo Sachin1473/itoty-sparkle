@@ -1,67 +1,77 @@
 import { Calendar, MapPin, LayoutGrid, Users } from "lucide-react";
 
+const infoCards = [
+  { icon: <Calendar className="w-6 h-6" />, value: "17th June 2026", label: "Date", href: "#about" },
+  { icon: <MapPin className="w-6 h-6" />, value: "New Delhi", label: "Location", href: "#contact" },
+  { icon: <LayoutGrid className="w-6 h-6" />, value: "16", label: "Categories", href: "#categories" },
+  { icon: <Users className="w-6 h-6" />, value: "8", label: "Jury Members", href: "#jury" },
+];
+
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-[72px] overflow-hidden" id="home">
-      {/* Full background image */}
-      <div className="absolute inset-0">
+    <section id="home">
+      {/* Banner */}
+      <div className="relative w-full min-h-[60vh] lg:min-h-[75vh] pt-[72px]">
         <img
-          src="https://www.itoty.org/assets/images/itoty-back-2025-desktop.jpg"
-          alt="ITOTY 2026 Awards"
-          className="w-full h-full object-cover"
+          src="/images/ITOTY_banner.png"
+          alt="ITOTY 2026 Banner"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-secondary/40 to-transparent" />
-      </div>
-
-      {/* Hero content overlay card */}
-      <div className="relative z-10 section-container flex items-end lg:items-center min-h-[calc(100vh-72px)] pb-32 lg:pb-0">
-        <div className="bg-card/95 backdrop-blur-sm rounded-lg shadow-xl p-8 lg:p-12 max-w-xl w-full">
-          <span className="font-condensed text-xs font-bold tracking-[0.2em] uppercase text-secondary mb-4 block">
-            7th Edition • Since 2019
-          </span>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[0.95] text-foreground mb-2">
+        <div className="absolute inset-0 bg-secondary/60" />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-[60vh] lg:min-h-[75vh] px-4">
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none mb-4">
             ITOTY <em className="italic text-primary">2026</em>
           </h1>
-          <p className="font-condensed text-lg sm:text-xl font-semibold tracking-wide uppercase text-secondary mt-3 mb-2">
+          <p className="font-condensed text-lg sm:text-xl lg:text-2xl font-bold tracking-[0.15em] uppercase text-white/90 mb-3">
             India's Biggest Tractor Awards is Back!
           </p>
-          <p className="text-base font-light leading-relaxed text-muted-foreground mt-4 mb-8">
-            Stay tuned for more updates! Recognising outstanding contributions across the Indian agricultural ecosystem. Celebrating innovation, impact, and farmer-first thinking.
+          <p className="text-base sm:text-lg text-white/80 font-light">
+            Stay Tuned For More Updates!
           </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://pages.razorpay.com/pl_OS8aVodkJGyGwi/view"
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground font-condensed text-sm font-bold tracking-[0.12em] uppercase px-7 py-3.5 rounded transition-all hover:bg-forest-mid"
-            >
-              Get ITOTY Pass
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </a>
-            <a href="#about" className="btn-secondary">
-              Learn More
-            </a>
+        </div>
+      </div>
+
+      {/* 2025 Winners Strip */}
+      <div className="bg-muted py-10 lg:py-14">
+        <div className="section-container text-center">
+          <span className="font-condensed text-xs font-bold tracking-[0.2em] uppercase text-primary mb-2 block">
+            ITOTY 2025 Winner
+          </span>
+          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-foreground mb-8">
+            Indian Tractor of the Year 2025
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+            <div className="bg-card rounded-xl shadow-md border border-primary/10 p-6 max-w-xs w-full">
+              <img
+                src="https://www.tractorjunction.com/assets/tractor/farmtrac-47-promaxx-4wd.webp"
+                alt="Farmtrac Promaxx 47"
+                className="w-full h-40 object-contain mb-4"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://www.itoty.org/assets/images/itoty-logo.png";
+                  (e.target as HTMLImageElement).className = "w-20 h-20 object-contain mx-auto opacity-30 mb-4";
+                }}
+              />
+              <p className="font-heading text-lg font-semibold text-foreground">Farmtrac Promaxx 47</p>
+              <p className="text-sm text-muted-foreground mt-1">6th Edition • 2025</p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Quick stats bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-20">
-        <div className="section-container">
-          <div className="bg-card rounded-t-lg shadow-lg grid grid-cols-2 lg:grid-cols-4 divide-x divide-primary/10 mx-4 lg:mx-12">
-            {[
-              { icon: <Calendar className="w-5 h-5" />, value: "17th June 2026", label: "Date" },
-              { icon: <MapPin className="w-5 h-5" />, value: "New Delhi", label: "Location" },
-              { icon: <LayoutGrid className="w-5 h-5" />, value: "16", label: "Categories" },
-              { icon: <Users className="w-5 h-5" />, value: "8", label: "Jury Members" },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-2 py-5 px-4">
-                <div className="text-primary">{item.icon}</div>
-                <span className="font-condensed text-sm font-bold text-foreground">{item.value}</span>
-                <span className="text-xs text-muted-foreground">{item.label}</span>
-              </div>
-            ))}
-          </div>
+      {/* Clickable Info Cards */}
+      <div className="section-container py-10 lg:py-14">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          {infoCards.map((card) => (
+            <a
+              key={card.label}
+              href={card.href}
+              className="group flex flex-col items-center gap-3 bg-card rounded-xl border border-primary/10 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all p-6 lg:p-8 text-center"
+            >
+              <div className="text-primary group-hover:scale-110 transition-transform">{card.icon}</div>
+              <span className="font-heading text-xl lg:text-2xl font-bold text-foreground">{card.value}</span>
+              <span className="font-condensed text-xs font-semibold tracking-[0.15em] uppercase text-muted-foreground">{card.label}</span>
+            </a>
+          ))}
         </div>
       </div>
     </section>
