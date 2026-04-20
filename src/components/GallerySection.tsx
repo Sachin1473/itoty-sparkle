@@ -39,7 +39,7 @@ const galleryByYear: Record<string, string[]> = {
   ],
 };
 
-const years = Object.keys(galleryByYear);
+const years = Object.keys(galleryByYear).sort((a, b) => Number(b) - Number(a));
 
 const GallerySection = () => {
   const [activeYear, setActiveYear] = useState(years[0]);
@@ -48,7 +48,6 @@ const GallerySection = () => {
     <section className="py-20 lg:py-28 bg-muted" id="gallery">
       <div className="section-container">
         <div className="section-label">
-          <div className="w-8 h-px bg-secondary" />
           <span className="font-condensed text-xs font-semibold tracking-[0.2em] uppercase text-secondary">Our Gallery</span>
         </div>
         <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-tight text-foreground mb-4">

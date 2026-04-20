@@ -97,7 +97,7 @@
   }
 
   .section-label-line {
-    @apply w-8 h-px bg-primary;
+    @apply hidden;
   }
 
   .section-label-text {
