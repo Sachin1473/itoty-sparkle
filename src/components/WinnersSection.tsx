@@ -1,4 +1,5 @@
-import { Trophy } from "lucide-react";
+import { Trophy, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const winners = [
   {
@@ -70,9 +71,17 @@ const WinnersSection = () => (
               )}
             </div>
             {/* Info */}
-            <div className="p-5">
-              <span className="font-condensed text-[11px] font-semibold tracking-[0.15em] uppercase text-primary">{w.edition}</span>
-              <h3 className="font-heading text-lg font-semibold text-foreground mt-1 leading-snug">{w.model}</h3>
+            <div className="p-5 flex flex-col gap-3">
+              <div>
+                <span className="font-condensed text-[11px] font-semibold tracking-[0.15em] uppercase text-primary">{w.edition}</span>
+                <h3 className="font-heading text-lg font-semibold text-foreground mt-1 leading-snug">{w.model}</h3>
+              </div>
+              <Link
+                to={`/winners/${w.year}`}
+                className="inline-flex items-center justify-center gap-1.5 mt-1 font-condensed text-xs font-bold tracking-[0.15em] uppercase text-primary hover:text-primary/80 border border-primary/30 hover:border-primary rounded-full px-4 py-2 transition-all self-start"
+              >
+                View All Winners <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         ))}
